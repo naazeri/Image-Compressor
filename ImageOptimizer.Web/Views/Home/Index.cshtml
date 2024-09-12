@@ -1,0 +1,25 @@
+﻿@model UploadViewModel
+@{
+    ViewData["Title"] = "Upload Images";
+}
+
+<div class="card">
+    <h3 class="card-header">Image Upload</h3>
+    <div class="card-body">
+        <form asp-action="Index" asp-controller="Home" enctype="multipart/form-data" method="post" class="mt-4">
+            <div class="form-group">
+                <label asp-for="Images">Select Images</label>
+                <input asp-for="Images" type="file" multiple />
+                <span asp-validation-for="Images" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Optimize</button>
+        </form>
+    </div>
+</div>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success mt-4">
+        @ViewBag.Message
+    </div>
+}
