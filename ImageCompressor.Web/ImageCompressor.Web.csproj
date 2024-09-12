@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ImageOptimizer.Service\ImageOptimizer.Service.csproj" />
+    <ProjectReference Include="..\ImageCompressor.Service\ImageCompressor.Service.csproj" />
   </ItemGroup>
 
 </Project>

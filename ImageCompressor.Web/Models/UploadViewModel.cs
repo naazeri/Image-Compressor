@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ImageOptimizer.Web.Models;
+namespace ImageCompressor.Web.Models;
 
 public class UploadViewModel
 {

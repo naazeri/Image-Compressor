@@ -1,10 +1,10 @@
-using ImageOptimizer.Service.Services;
+using ImageCompressor.Service.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<IImageOptimizerService, ImageOptimizerService>();
+builder.Services.AddScoped<IImageCompressorService, ImageCompressorService>();
 
 var app = builder.Build();
 

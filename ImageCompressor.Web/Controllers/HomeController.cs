@@ -1,10 +1,10 @@
-using ImageOptimizer.Service.Services;
-using ImageOptimizer.Web.Models;
+using ImageCompressor.Service.Services;
+using ImageCompressor.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ImageOptimizer.Web.Controllers;
+namespace ImageCompressor.Web.Controllers;
 
-public class HomeController(IImageOptimizerService imageOptimizerService) : Controller
+public class HomeController(IImageCompressorService imageCompressorService) : Controller
 {
     #region Properties
 
@@ -32,14 +32,14 @@ public class HomeController(IImageOptimizerService imageOptimizerService) : Cont
                     using var memoryStream = new MemoryStream();
                     file.CopyTo(memoryStream);
                     var fileBytes = memoryStream.ToArray();
-                    tasks.Add(imageOptimizerService.CompressAsync(fileBytes, 1680, 400));
+                    tasks.Add(imageCompressorService.CompressAsync(fileBytes, 1680, 400));
                 });
 
             // Wait for all tasks to complete
             await Task.WhenAll(tasks);
 
             // Show success message
-            ViewBag.Message = "Images have been optimized. Please check the 'wwwroot/images' directory.";
+            ViewBag.Message = "Images have been compressed. Please check the 'wwwroot/images' directory.";
         }
 
         return View("Index", model);

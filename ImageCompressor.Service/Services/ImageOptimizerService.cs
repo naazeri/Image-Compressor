@@ -2,11 +2,11 @@
 using SixLabors.ImageSharp.Formats.Webp;
 using SixLabors.ImageSharp.Processing;
 
-namespace ImageOptimizer.Service.Services;
+namespace ImageCompressor.Service.Services;
 
-public class ImageOptimizerService : IImageOptimizerService
+public class ImageCompressorService : IImageCompressorService
 {
-    private readonly string optimizedImageDirectory = "images";
+    private readonly string compressedImageDirectory = "images";
 
     public async Task<(string maxPath, string largePath, string thumbnailPath)> CompressAsync(byte[] imageBytes, int largeWidth, int thumbnailWidth)
     {
@@ -38,7 +38,7 @@ public class ImageOptimizerService : IImageOptimizerService
         }
 
         var now = DateTime.Now;
-        var viewPath = Path.Combine(optimizedImageDirectory, now.Year.ToString(), now.Month.ToString(), subDirName);
+        var viewPath = Path.Combine(compressedImageDirectory, now.Year.ToString(), now.Month.ToString(), subDirName);
         var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", viewPath);
         var imageName = $"{Guid.NewGuid().ToString()}.webp";
 

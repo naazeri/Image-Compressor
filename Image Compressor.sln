@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageOptimizer.Service", "ImageOptimizer.Service\ImageOptimizer.Service.csproj", "{53CFB89D-27C8-426E-85F6-984C33EEEC4F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCompressor.Service", "ImageCompressor.Service\ImageCompressor.Service.csproj", "{53CFB89D-27C8-426E-85F6-984C33EEEC4F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageOptimizer.Web", "ImageOptimizer.Web\ImageOptimizer.Web.csproj", "{834DDA06-EA0B-482F-A8FD-AC8ACCFDFD4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageCompressor.Web", "ImageCompressor.Web\ImageCompressor.Web.csproj", "{834DDA06-EA0B-482F-A8FD-AC8ACCFDFD4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
